@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Profile CV Adhyasta Sylva Jaya</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Font Gabungan: Poppins, Lato, dan Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Lato:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+/* 1. THE SETUP */
+* {
+  box-sizing: border-box;
+}
+
+p {
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+body {
+  background-color: #e2e8f0; /* Diperbarui sesuai tema baru */
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr;
+  margin: 0;
+  min-height: 100vh;
+  padding: 20px 0;
+  place-items: center;
+}
+
+/* 1.1 BACKGROUND STYLING (BASE SLIDES 2-11) */
+.slide-container {
+  align-items: center;
+  background: linear-gradient(135deg, #fdfdfc 0%, #eef5f1 100%);
+  border-radius: 12px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  font-family: 'Lato', sans-serif;
+  height: 720px;
+  justify-content: center;
+  overflow: hidden;
+  padding: 50px 60px 90px 60px;
+  position: relative;
+  width: 1280px;
+}
+
+.slide-container::before {
+  content: '';
+  position: absolute;
+  top: -15%;
+  left: -10%;
+  width: 60%;
+  height: 60%;
+  background: radial-gradient(circle, rgba(82, 183, 136, 0.25) 0%, rgba(82, 183, 136, 0) 70%);
+  filter: blur(60px);
+  z-index: 0;
+}
+
+.slide-container::after {
+  content: '';
+  position: absolute;
+  bottom: -10%;
+  right: -5%;
+  width: 50%;
+  height: 60%;
+  background: radial-gradient(circle, rgba(24, 78, 119, 0.15) 0%, rgba(24, 78, 119, 0) 70%);
+  filter: blur(70px);
+  z-index: 0;
+}
+
+.slide-container > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* =========================================
+   1.1.2 KHUSUS SLIDE COVER (SLIDE 1) 
+========================================= */
+.slide-container.cover-slide {
+  background: linear-gradient(135deg, rgba(4,120,87,0.95) 0%, rgba(15,23,42,0.98) 100%), url('https://images.unsplash.com/photo-1511497584788-876760111969?q=80&w=2560&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 80px;
+}
+.slide-container.cover-slide::before {
+  top: -100px;
+  right: -100px;
+  left: auto;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.25) 0%, transparent 70%);
+  border-radius: 50%;
+  filter: none;
+}
+.slide-container.cover-slide::after {
+  bottom: -150px;
+  left: -100px;
+  right: auto;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(245, 158, 11, 0.15) 0%, transparent 70%);
+  border-radius: 50%;
+  filter: none;
+}
+.content-overlay {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cover-badge {
+  background-color: #f59e0b;
+  color: #ffffff;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  margin-bottom: 35px;
+  font-size: 16px;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 10px 15px rgba(245, 158, 11, 0.3);
+}
+.slide-container.cover-slide h1 {
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 76px;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 25px;
+  text-shadow: 2px 4px 15px rgba(0,0,0,0.4);
+  letter-spacing: -1px;
+}
+.slide-container.cover-slide p {
+  color: #e2e8f0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 26px;
+  font-weight: 300;
+  max-width: 900px;
+  line-height: 1.7;
+  margin: 0 auto;
+}
+.slide-container.cover-slide p strong {
+  font-weight: 500;
+  color: #10b981;
+}
+
+/* === COVER FEATURES LIST === */
+.cover-features-wrapper {
+    margin-top: 40px;
+    display: inline-block;
+    text-align: left;
+    background: rgba(15, 23, 42, 0.4);
+    padding: 20px 40px;
+    border-radius: 16px;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.cover-features {
+    list-style: none !important;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.cover-features li {
+    color: #ffffff !important;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 0;
+}
+.cover-features li i {
+    color: #34d399; /* Warna hijau terang untuk ikon centang */
+    font-size: 24px;
+}
+
+/* 1.2 FOOTER STYLING (ATTRACTIVE GRADIENT) */
+.slide-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(90deg, #081c15 0%, #1b4332 50%, #2d6a4f 100%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: #ffffff;
+  font-family: 'Lato', sans-serif;
+  padding: 20px 50px;
+  z-index: 10;
+  box-shadow: 0 -5px 20px rgba(0,0,0,0.15);
+  border-top: 2px solid #52b788;
+}
+
+.slide-footer .footer-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.slide-footer .footer-item i {
+  font-size: 22px;
+  color: #95d5b2;
+  background: rgba(255,255,255,0.1);
+  padding: 8px;
+  border-radius: 50%;
+}
+
+/* 2. CONSISTENT TYPOGRAPHY */
+.slide-container h2,
+.slide-container h3 {
+  color: #081c15;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+}
+
+.slide-container li,
+.slide-container .subtitle,
+.slide-container .number-label {
+  color: #2d3748;
+  font-family: 'Lato', sans-serif;
+}
+
+.slide-container h2.slide-title {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-align: left;
+  width: 100%;
+  border-left: 6px solid #2d6a4f;
+  padding-left: 15px;
+}
+
+.slide-container h3 {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #1b4332; 
+}
+
+.slide-container p:not(.cover-slide p),
+.slide-container li,
+.slide-container .subtitle {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #2d3748;
+}
+
+.slide-container .content-area {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
+  width: 100%;
+}
+
+/* 3. LAYOUT DEFINITIONS & GLASSMORPHISM */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.08);
+}
+
+.two-column {
+  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  width: 100%;
+}
+
+.two-column.tiled {
+  align-items: stretch;
+}
+
+.two-column.tiled > div {
+  padding: 40px;
+  text-align: left;
+}
+
+.two-column ul {
+  list-style: none !important;
+  margin: 0;
+  padding-left: 0;
+}
+
+.two-column li {
+  margin-bottom: 12px;
+}
+
+.image-wrapper {
+  border-radius: 16px;
+  height: 380px;
+  max-width: 100%;
+  overflow: hidden;
+  width: 100%;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+  border: 4px solid #ffffff;
+}
+
+.image-wrapper img {
+  height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.tiled-content {
+  align-items: stretch;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  width: 100%;
+}
+
+.grid-3x2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  width: 100%;
+}
+.grid-3x2 .tile {
+  padding: 25px 25px;
+}
+.grid-3x2 .tile .icon {
+  font-size: 28px;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 15px;
+  border-radius: 16px;
+}
+.grid-3x2 .tile h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+.grid-3x2 .tile p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.tile {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 35px 30px;
+  text-align: left;
+}
+
+.tile .icon {
+  color: #ffffff;
+  font-size: 35px;
+  margin-bottom: 25px;
+  background: linear-gradient(135deg, #2d6a4f, #52b788);
+  width: 75px;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(45, 106, 79, 0.3);
+}
+
+.highlight-numbers-layout > div:first-child {
+  flex: 0 0 40%;
+  text-align: center;
+}
+
+.highlight-numbers-layout .number {
+  background: -webkit-linear-gradient(#081c15, #2d6a4f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 140px;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1;
+  filter: drop-shadow(0px 10px 10px rgba(0,0,0,0.1));
+}
+
+.highlight-numbers-layout .number-label {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1b4332;
+  margin-top: 15px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Table Layout */
+.table-layout {
+  width: 100%;
+  padding: 10px;
+}
+
+.table-layout table {
+  border-collapse: collapse;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.table-layout th,
+.table-layout td {
+  border-bottom: 1px solid rgba(45, 106, 79, 0.15);
+  padding: 16px 20px;
+  text-align: left;
+}
+
+.table-layout th {
+  background: linear-gradient(90deg, #1b4332, #2d6a4f);
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.table-layout tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.table-layout tr:last-child td {
+  border-bottom: none;
+}
+
+.compact-table-wrapper {
+  padding: 5px;
+}
+.compact-table th,
+.compact-table td {
+  padding: 10px 15px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* Status Badges */
+.badge {
+  display: inline-block;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+  white-space: nowrap;
+}
+.badge.selesai {
+  background-color: #d1fae5;
+  color: #065f46;
+  border: 1px solid #a7f3d0;
+}
+.badge.berjalan {
+  background-color: #fef3c7;
+  color: #92400e;
+  border: 1px solid #fde68a;
+}
+
+/* Q&A Layout */
+.qa-layout {
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+  align-self: center;
+}
+
+.qa-layout h2 {
+  font-size: 70px;
+  margin-bottom: 20px;
+  color: #081c15;
+}
+
+.qa-layout p {
+  font-size: 24px;
+  color: #2d6a4f;
+}
+
+/* Styled Lists - Centang */
+ul.styled-ul {
+    list-style: none !important; 
+    padding: 0;
+    margin: 0;
+}
+ul.styled-ul li {
+    padding-left: 35px;
+    position: relative;
+    margin-bottom: 15px;
+    list-style: none !important;
+}
+ul.styled-ul li::before {
+    content: '\f058';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    color: #52b788;
+    position: absolute;
+    left: 0;
+    top: 2px;
+    font-size: 20px;
+}
+    </style>
+</head>
+<body>
+
+<!-- KONTEN SLIDE COVER -->
+<div class="slide-container cover-slide" id="slide1">
+    <div class="content-overlay">
+        
+        <div class="cover-badge">
+            <i class="fa-solid fa-leaf"></i> Company Profile
+        </div>
+        
+        <h1>CV. ADHYASTA SYLVA JAYA</h1>
+        
+        <p>
+            Mitra Strategis Solusi Kehutanan Berkelanjutan & Restorasi Lingkungan.<br>
+            <strong>Profesionalisme</strong> dalam restorasi alam untuk masa depan yang lebih baik.
+        </p>
+
+        <!-- Poin Keahlian Utama Dikembalikan -->
+        <div class="cover-features-wrapper">
+            <ul class="cover-features">
+                <li><i class="fa-solid fa-circle-check"></i> Rehabilitasi & Restorasi Hutan</li>
+                <li><i class="fa-solid fa-circle-check"></i> Reklamasi Pascatambang</li>
+                <li><i class="fa-solid fa-circle-check"></i> Pembibitan & Penanaman</li>
+            </ul>
+        </div>
+        
+    </div>
+</div>
+
+<div class="slide-container" id="slide2">
+    <h2 class="slide-title">Visi & Misi Perusahaan</h2>
+    <div class="content-area">
+        <div class="two-column">
+            <div>
+                <h3>Visi</h3>
+                <p>Menjadi perusahaan terkemuka dan acuan bidang rehabilitasi Hutan di Propinsi Kalimantan Timur dan Nasional serta dapat memberikan manfaat bagi kesejahteraan masyarakat di sekitar kawasan hutan dan lingkungan.</p>
+                
+                <h3 style="margin-top: 25px;">Misi</h3>
+                <ul class="styled-ul">
+                    <li>Melakukan aktivitas usaha di bidang Rehabilitasi Hutan dengan pengembangan berkelanjutan pada rencana teknis, pembibitan, penanaman & pemeliharaan.</li>
+                    <li>Mengelola perusahaan secara Good Corporate Governance didukung SDM profesional.</li>
+                    <li>Meningkatkan kontribusi positif kepada masyarakat dan lingkungan.</li>
+                </ul>
+            </div>
+            <div>
+                <div class="image-wrapper">
+                    <img src="https://i.pinimg.com/1200x/db/95/93/db9593690526b4a8cdfc72e4307aa009.jpg" alt="Tangan menanam bibit pohon kecil di tanah">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="slide-footer">
+        <div class="footer-item">
+            <i class="fa-solid fa-map-location-dot"></i> 
+            <span>Jl. Padat Karya Gg. Sa'aludin RT.48 Blok A No. 10, Loa Bakung, Samarinda</span>
+        </div>
+        <div class="footer-item">
+            <i class="fa-solid fa-phone-volume"></i> 
+            <span>0821-2525-3335</span>
+        </div>
+        <div class="footer-item">
+            <i class="fa-solid fa-envelope-open-text"></i> 
+            <span>adhyastasylvajaya@gmail.com</span>
+        </div>
+    </div>
+</div>
+
+<div class="slide-container" id="slide3">
+    <h2 class="slide-title">Identitas & Susunan Pengurus</h2>
+    <div class="content-area">
+        <div class="two-column tiled">
+            <div class="glass-panel">
+                <h3>Data Administrasi</h3>
+                <ul class="styled-ul">
+                    <li><strong>Alamat Pusat:</strong> Jl. Padat Karya eks. Jl. Lobang Tiga, Gang Sa'aludin, Blok A No. 10 RT. 48 Kel. Loa Bakung, Kec. Sungai Kunjang, Kota Samarinda, Kalimantan Timur.</li>
+                    <li><strong>NPWP:</strong> 85.066.740.3-722.000</li>
+                    <li><strong>NIB:</strong> 9120306520027 (Berbasis Risiko)</li>
+                    <li><strong>SIUP & TDP:</strong> Terdaftar resmi 9 Juli 2018</li>
+                    <li><strong>Akta Pendirian & Perubahan:</strong>
+                        <span style="font-size: 14px; line-height: 1.5; display: block; margin-top: 5px; color: #4a5568;">
+                            - <strong>Pendirian:</strong> No. 01, 04 Juni 2018 (Notaris: Silvanus Deddy Nugroho, S.H., M.Kn.).<br>
+                            - <strong>Perubahan 1:</strong> No. 05, 04 Feb 2019 (Notaris: Noni Mariance Palit, S.H., M.Kn.).<br>
+                            - <strong>Perubahan 2:</strong> No. 09, 18 Feb 2022 (Notaris: Johny Marthen Londong, S.H., M.Kn.).
+                        </span>
+                    </li>
+                </ul>
+            </div>
+            <div class="glass-panel">
+                <h3>Susunan Pengurus & Saham</h3>
+                <p>Didukung oleh manajemen yang solid dan berkomitmen tinggi terhadap kualitas layanan operasional:</p>
+                <br>
+                <ul class="styled-ul">
+                    <li><strong>Direktur Utama:</strong> Ernawati<br></li>
+                    <li><strong>Direktur / Wakil Direktur:</strong> Fanny Octaviani<br></li>
+                    <li><strong>Komisaris:</strong> Agus Widodo<br></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="slide-footer">
+        <div class="footer-item"><i class="fa-solid fa-map-location-dot"></i> <span>Jl. Padat Karya Gg. Sa'aludin RT.48 Blok A No. 10, Loa Bakung, Samarinda</span></div>
+        <div class="footer-item"><i class="fa-solid fa-phone-volume"></i> <span>0821-2525-3335</span></div>
+        <div class="footer-item"><i class="fa-solid fa-envelope-open-text"></i> <span>adhyastasylvajaya@gmail.com</span></div>
+    </div>
+</div>
+
+<div class="slide-container" id="slide4">
+    <h2 class="slide-title">Sertifikasi & Izin Khusus</h2>
+    <div class="content-area">
+        <div class="grid-3x2">
+            <div class="tile glass-panel">
+                <div class="icon"><i class="fa-solid fa-helmet-safety"></i></div>
+                <h3>IUJP Pertambangan</h3>
+                <p>No: 91203065200270004 (KBLI 09900). Izin Usaha Jasa Pertambangan (Penunjang Pertambangan & Penggalian).</p>
+            </div>
+            <div class="tile glass-panel">
+                <div class="icon"><i class="fa-solid fa-seedling"></i></div>
+                <h3>Standar Pengadaan Bibit</h3>
+                <p>No: 91203065200270007. Sertifikat Standar Pengadaan dan Pengedaran Bibit Tanaman Hutan.</p>
+            </div>
+            <div class="tile glass-panel">
+                <div class="icon"><i class="fa-solid fa-tree"></i></div>
+                <h3>Sertifikat Pohon Induk</h3>
+                <p>No: SF.92/BPTH.WI/SET/DAS.2/SB/6/2024. Sertifikat Sumber Benih Tanaman Hutan (Spesies Gaharu, Luas 1 Ha).</p>
+            </div>
+            <div class="tile glass-panel">
+                <div class="icon"><i class="fa-solid fa-leaf"></i></div>
+                <h3>Pengedar Benih Hortikultura</h3>
+                <p>No: 194/CV/KTM/09.2025. Sertifikat Kompetensi Pengedar Benih dari UPTD PSBTPH Prov. Kalimantan Timur.</p>
+            </div>
+            <div class="tile glass-panel">
+                <div class="icon"><i class="fa-solid fa-handshake"></i></div>
+                <h3>Rekanan Pupuk Indonesia</h3>
+                <p>User ID ProcureX: 00038497. Status LULUS (Bidang 52-K3 & LH dan 66-Har. Lingkungan).</p>
+            </div>
+            <div class="tile glass-panel">
+                <div class="icon"><i class="fa-solid fa-users-viewfinder"></i></div>
+                <h3>BPJS Ketenagakerjaan</h3>
+                <p>NPP: 19120732. Kepesertaan Jaminan Kecelakaan Kerja, Kematian, Hari Tua, dan Jaminan Pensiun.</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="slide-footer">
+        <div class="footer-item"><i class="fa-solid fa-map-location-dot"></i> <span>Jl. Padat Karya Gg. Sa'aludin RT.48 Blok A No. 10, Loa Bakung, Samarinda</span></div>
+        <div class="footer-item"><i class="fa-solid fa-phone-volume"></i> <span>0821-2525-3335</span></div>
+        <div class="footer-item"><i class="fa-solid fa-envelope-open-text"></i> <span>adhyastasylvajaya@gmail.com</span></div>
+    </div>
+</div>
+
+<div class="slide-container" id="slide5">
+    <h2 class="slide-title">Keahlian Utama Perusahaan</h2>
+    <div class="content-area">
+        <div class="two-column">
+            <div>
+                <h3>Terdaftar sesuai Klasifikasi (KBLI)</h3>
+                <p>Kami memiliki keahlian spesifik yang diakui secara legal untuk menjalankan operasional kehutanan dan reklamasi berskala besar:</p>
+                <ul class="styled-ul">
+                    <li><strong>KBLI 02409:</strong> Jasa Penunjang Kehutanan Lainnya (Pembibitan, Penanaman, Pemeliharaan Hutan).</li>
+                    <li><strong>KBLI 09900:</strong> Aktivitas Penunjang Pertambangan (Fokus pada reklamasi area bekas tambang).</li>
+                    <li><strong>KBLI 02140:</strong> Pengusahaan Perbenihan Tanaman Kehutanan.</li>
+                    <li><strong>Jasa Restorasi:</strong> Pelaksanaan Rehabilitasi dan Restorasi Kehutanan Sosial.</li>
+                </ul>
+            </div>
+            <div>
+                <div class="image-wrapper">
+                    <img src="https://i.pinimg.com/1200x/98/1e/73/981e73bc9ee4da036eda36cd2a9ebddd.jpg" alt="Pekerja kehutanan di lapangan menggunakan tablet">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="slide-footer">
+        <div class="footer-item"><i class="fa-solid fa-map-location-dot"></i> <span>Jl. Padat Karya Gg. Sa'aludin RT.48 Blok A No. 10, Loa Bakung, Samarinda</span></div>
+        <div class="footer-item"><i class="fa-solid fa-phone-volume"></i> <span>0821-2525-3335</span></div>
+        <div class="footer-item"><i class="fa-solid fa-envelope-open-text"></i> <span>adhyastasylvajaya@gmail.com</span></div>
+    </div>
+</div>
+
+<div class="slide-container" id="slide6">
+    <h2 class="slide-title">Spesialis & Tenaga Ahli</h2>
+    <div class="content-area">
+        <div class="tiled-content">
+            <div class="tile glass-panel" style="padding: 25px 20px;">
+                <div class="icon" style="width: 60px; height: 60px; font-size: 28px; margin-bottom: 15px;"><i class="fa-solid fa-user-tie"></i></div>
+                <h3 style="font-size: 20px;">Tim Operasional</h3>
+                <ul class="styled-ul" style="font-size: 13px;">
+                    <li><strong>Muhammad Karno, S.H., M.Ling.</strong><br>Penanggung Jawab Operasional</li>
+                    <li><strong>Ady Handoko, A.Md</strong><br>Koordinator Kegiatan</li>
+                    <li><strong>Valentino Agung</strong><br>Koordinator Pengawas</li>
+                </ul>
+            </div>
+            <div class="tile glass-panel" style="padding: 25px 20px;">
+                <div class="icon" style="width: 60px; height: 60px; font-size: 28px; margin-bottom: 15px;"><i class="fa-solid fa-user-graduate"></i></div>
+                <h3 style="font-size: 20px;">Tenaga Ahli</h3>
+                <ul class="styled-ul" style="font-size: 13px;">
+                    <li><strong>Dr. Liris Lis Komara, S.Hut., M.Si.</strong><br>Ahli Rehabilitasi Hutan & Reklamasi</li>
+                </ul>
+            </div>
+            <div class="tile glass-panel" style="padding: 25px 20px;">
+                <div class="icon" style="width: 60px; height: 60px; font-size: 28px; margin-bottom: 15px;"><i class="fa-solid fa-users-gear"></i></div>
+                <h3 style="font-size: 20px;">Tim Teknis & Lapangan</h3>
+                <ul class="styled-ul" style="font-size: 13px;">
+                    <li><strong>Febri Prayoga</strong><br>Sertifikat BNSP POP</li>
+                    <li><strong>Tim GIS:</strong><br>Moh. Nur Hidayat, Ali Syahbana, Mochamad A. Derin</li>
+                    <li><strong>Tim Nursery:</strong><br>Ari Febriyanto, Syafreansyah, Singgih Tri Wibowo</li>
+                </ul>
+            </div>
+            <div class="tile glass-panel" style="padding: 25px 20px;">
+                <div class="icon" style="width: 60px; height: 60px; font-size: 28px; margin-bottom: 15px;"><i class="fa-solid fa-clipboard-user"></i></div>
+                <h3 style="font-size: 20px;">Tenaga Administrasi</h3>
+                <ul class="styled-ul" style="font-size: 13px;">
+                    <li><strong>Putri Maya Bela</strong></li>
+                    <li><strong>Mutia Farida</strong></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="slide-footer">
+        <div class="footer-item"><i class="fa-solid fa-map-location-dot"></i> <span>Jl. Padat Karya Gg. Sa'aludin RT.48 Blok A No. 10, Loa Bakung, Samarinda</span></div>
+        <div class="footer-item"><i class="fa-solid fa-phone-volume"></i> <span>0821-2525-3335</span></div>
+        <div class="footer-item"><i class="fa-solid fa-envelope-open-text"></i> <span>adhyastasylvajaya@gmail.com</span></div>
+    </div>
+</div>
+
+<div class="slide-container" id="slide-nursery">
+    <h2 class="slide-title">Pembibitan (Nursery)</h2>
+    <div class="content-area">
+        <div class="tiled-content" style="gap: 40px; margin-top: 15px;">
+            <!-- Kartu 1: Pembibitan Hortikultura -->
+            <div class="tile glass-panel" style="padding: 45px 30px; text-align: center; align-items: center; justify-content: space-between; display: flex; flex-direction: column;">
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <div class="icon" style="width: 85px; height: 85px; font-size: 40px; margin-bottom: 25px; border-radius: 50%;"><i class="fa-solid fa-seedling"></i></div>
+                    <h3 style="font-size: 24px; text-align: center; margin-bottom: 15px;">Pembibitan Hortikultura</h3>
+                    <p style="font-size: 16px; text-align: center; color: #4a5568;">Pusat pengembangan dan budidaya bibit tanaman hortikultura berkualitas tinggi.</p>
+                </div>
+                <div style="margin-top: 15px; display: flex; flex-direction: column; align-items: center; gap: 8px;">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https%3A%2F%2Fmaps.app.goo.gl%2FSEazQtfTi8jzWbt97" alt="QR Code Pembibitan Hortikultura" style="width: 110px; height: 110px; border-radius: 8px; border: 3px solid #2d6a4f; padding: 5px; background: white; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                    <span style="font-size: 13px; font-weight: 700; color: #1b4332; letter-spacing: 0.5px; margin-top: 5px;"><i class="fa-solid fa-qrcode"></i> Scan Lokasi</span>
+                </div>
+            </div>
+
+            <!-- Kartu 2: Pembibitan Kehutanan -->
+            <div class="tile glass-panel" style="padding: 45px 30px; text-align: center; align-items: center; justify-content: space-between; display: flex; flex-direction: column;">
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <div class="icon" style="width: 85px; height: 85px; font-size: 40px; margin-bottom: 25px; border-radius: 50%;"><i class="fa-solid fa-tree"></i></div>
+                    <h3 style="font-size: 24px; text-align: center; margin-bottom: 15px;">Pembibitan Kehutanan</h3>
+                    <p style="font-size: 16px; text-align: center; color: #4a5568;">Fasilitas penyediaan bibit utama tanaman kehutanan untuk rehabilitasi & reklamasi.</p>
+                </div>
+                <div style="margin-top: 15px; display: flex; flex-direction: column; align-items: center; gap: 8px;">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https%3A%2F%2Fmaps.app.goo.gl%2FieCTvuexECb9k2Ce9" alt="QR Code Pembibitan Kehutanan" style="width: 110px; height: 110px; border-radius: 8px; border: 3px solid #2d6a4f; padding: 5px; background: white; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                    <span style="font-size: 13px; font-weight: 700; color: #1b4332; letter-spacing: 0.5px; margin-top: 5px;"><i class="fa-solid fa-qrcode"></i> Scan Lokasi</span>
+                </div>
+            </div>
+
+            <!-- Kartu 3: Kebun Benih Gaharu -->
+            <div class="tile glass-panel" style="padding: 45px 30px; text-align: center; align-items: center; justify-content: space-between; display: flex; flex-direction: column;">
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <div class="icon" style="width: 85px; height: 85px; font-size: 40px; margin-bottom: 25px; border-radius: 50%;"><i class="fa-solid fa-leaf"></i></div>
+                    <h3 style="font-size: 24px; text-align: center; margin-bottom: 15px;">Kebun Benih Gaharu</h3>
+                    <p style="font-size: 16px; text-align: center; color: #4a5568;">Area khusus sumber benih bersertifikat untuk spesies Gaharu unggulan seluas 1 Ha.</p>
+                </div>
+                <div style="margin-top: 15px; display: flex; flex-direction: column; align-items: center; gap: 8px;">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https%3A%2F%2Fmaps.app.goo.gl%2FC3k5qw6PBsUBgJfP7" alt="QR Code Kebun Benih Gaharu" style="width: 110px; height: 110px; border-radius: 8px; border: 3px solid #2d6a4f; padding: 5px; background: white; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                    <span style="font-size: 13px; font-weight: 700; color: #1b4332; letter-spacing: 0.5px; margin-top: 5px;"><i class="fa-solid fa-qrcode"></i> Scan Lokasi</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="slide-footer">
+        <div class="footer-item"><i class="fa-solid fa-map-location-dot"></i> <span>Jl. Padat Karya Gg. Sa'aludin RT.48 Blok A No. 10, Loa Bakung, Samarinda</span></div>
+        <div class="footer-item"><i class="fa-solid fa-phone-volume"></i> <span>0821-2525-3335</span></div>
+        <div class="footer-item"><i class="fa-solid fa-envelope-open-text"></i> <span>adhyastasylvajaya@gmail.com</span></div>
+    </div>
+</div>
+
+<div class="slide-container" id="slide7">
+    <h2 class="slide-title">Pengalaman & Portofolio</h2>
+    <div class="content-area">
+        <div class="two-column highlight-numbers-layout">
+            <div>
+                <div class="number">25+</div>
+                <div class="number-label">Proyek Skala Besar<br>Selesai & Berjalan</div>
+            </div>
+            <div>
+                <h3>Kategori Pengalaman Kami</h3>
+                <p>Kami telah dipercaya oleh berbagai perusahaan tambang terkemuka dan institusi pemerintah (seperti PT Indominco Mandiri, PT Kideco Jaya Agung, BPDASHL, dan Pupuk Kaltim). Pengalaman kami dikelompokkan menjadi 3 lini utama:</p>
+                <ul class="styled-ul" style="margin-top:20px;">
+                    <li><strong>Pengawasan Rehabilitasi DAS</strong></li>
+                    <li><strong>Penanaman & Pemeliharaan RHL</strong></li>
+                    <li><strong>Reklamasi Tambang & Mangrove</strong></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="slide-footer">
+        <div class="footer-item"><i class="fa-solid fa-map-location-dot"></i> <span>Jl. Padat Karya Gg. Sa'aludin RT.48 Blok A No. 10, Loa Bakung, Samarinda</span></div>
+        <div class="footer-item"><i class="fa-solid fa-phone-volume"></i> <span>0821-2525-3335</span></div>
+        <div class="footer-item"><i class="fa-solid fa-envelope-open-text"></i> <span>adhyastasylvajaya@gmail.com</span></div>
+    </div>
+</div>
+
+<div class="slide-container" id="slide8">
+    <h2 class="slide-title">Portofolio: Pengawasan Rehabilitasi DAS</h2>
+    <div class="content-area">
+        <div class="table-layout glass-panel">
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width:5%;">No</th>
+                        <th style="width:35%;">Nama Pekerjaan</th>
+                        <th style="width:20%;">Pemberi Kerja</th>
+                        <th style="width:20%;">Lokasi</th>
+                        <th style="width:10%;">Tahun</th>
+                        <th style="width:10%;">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Pengawasan Rehabilitasi DAS</td>
+                        <td>PT. Indominco Mandiri</td>
+                        <td>Taman Nasional Kutai</td>
+                        <td>2019</td>
+                        <td><span class="badge selesai">Selesai</span></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Pengawasan Rehabilitasi DAS</td>
+                        <td>PT. Indominco Mandiri</td>
+                        <td>Taman Nasional Kutai</td>
+                        <td>2020</td>
+                        <td><span class="badge selesai">Selesai</span></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Pengawasan Rehabilitasi DAS</td>
+                        <td>PT. Indominco Mandiri</td>
+                        <td>Taman Nasional Kutai</td>
+                        <td>2021</td>
+                        <td><span class="badge selesai">Selesai</span></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Pengawasan Rehabilitasi DAS (2 Kontrak)</td>
+                        <td>PT. Indominco Mandiri</td>
+                        <td>Taman Nasional Kutai</td>
+                        <td>2022 - 2023</td>
+                        <td><span class="badge selesai">Selesai</span></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Pengawasan Rehabilitasi DAS</td>
+                        <td>PT. Indominco Mandiri</td>
+                        <td>Taman Nasional Kutai</td>
+                        <td>2024</td>
+                        <td><span class="badge selesai">Selesai</span></td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Pengawasan Rehabilitasi DAS</td>
+                        <td>PT. Indominco Mandiri</td>
+                        <td>Taman Nasional Kutai</td>
+                        <td>2026</td>
+                        <td><span class="badge berjalan">Sedang Berjalan</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <div class="slide-footer">
+        <div class="footer-item"><i class="fa-solid fa-map-location-dot"></i> <span>Jl. Padat Karya Gg. Sa'aludin RT.48 Blok A No. 10, Loa Bakung, Samarinda</span></div>
+        <div class="footer-item"><i class="fa-solid fa-phone-volume"></i> <span>0821-2525-3335</span></div>
+        <div class="footer-item"><i class="fa-solid fa-envelope-open-text"></i> <span>adhyastasylvajaya@gmail.com</span></div>
+    </div>
+</div>
+
+<div class="slide-container" id="slide9">
+    <h2 class="slide-title">Portofolio: Penanaman & Pemeliharaan</h2>
+    <div class="content-area">
+        <div class="table-layout glass-panel compact-table-wrapper">
+            <table class="compact-table">
+                <thead>
+                    <tr>
+                        <th style="width:5%;">No</th>
+                        <th style="width:35%;">Nama Pekerjaan</th>
+                        <th style="width:20%;">Pemberi Kerja</th>
+                        <th style="width:20%;">Lokasi</th>
+                        <th style="width:10%;">Tahun</th>
+                        <th style="width:10%;">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Penanaman & Pemeliharaan RHL Rawan Bencana Gn. Hantu (342 Ha)</td>
+                        <td>BPDASHL Mahakam Berau</td>
+                        <td>KPHP Berau Barat</td>
+                        <td>2019-2021</td>
+                        <td><span class="badge selesai">Selesai</span></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Penanaman Rehabilitasi DAS TN Kutai Blok XIV (225 Ha)</td>
+                        <td>PT Kideco Jaya Agung</td>
+                        <td>Taman Nasional Kutai</td>
+                        <td>2020</td>
+                        <td><span class="badge selesai">Selesai</span></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Penanaman Rehabilitasi DAS TN Kutai Blok XXV (294 Ha)</td>
+                        <td>PT Kideco Jaya Agung</td>
+                        <td>Taman Nasional Kutai</td>
+                        <td>2021</td>
+                        <td><span class="badge selesai">Selesai</span></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Penanaman Rehabilitasi DAS TN Kutai Blok        XXXVII (281 Ha)</td>
+                        <td>PT Kideco Jaya Agung</td>
+                        <td>Taman Nasional Kutai</td>
+                        <td>2021</td>
+                        <td><span class="badge selesai">Selesai</span></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Pekerjaan Relokasi Kegiatan Rehabilitasi DAS (1.016 Ha)</td>
+                        <td>PT Gunung Bara Utama</td>
+                        <td>KPHP Belayan & Damai</td>
+                        <td>2025</td>
+                        <td><span class="badge selesai">Selesai</span></td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Pekerjaan Penyusunan Rencana Teknis (Rantek) Penanaman (1.016 Ha)</td>
+                        <td>PT Gunung Bara Utama</td>
+                        <td>KPHP Belayan & Damai</td>
+                        <td>2025</td>
+                        <td><span class="badge selesai">Selesai</span></td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Pekerjaan Penanaman (P0) Rehabilitasi DAS (1.016 Ha)</td>
+                        <td>PT Gunung Bara Utama</td>
+                        <td>KPHP Belayan & Damai</td>
+                        <td>2025</td>
+                        <td><span class="badge berjalan">Sedang Berjalan</span></td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Pengadaan Bibit Tanaman Penghijauan Lingkungan</td>
+                        <td>Dinas Kehutanan Prov. Kaltim</td>
+                        <td>Loa Janan Ilir</td>
+                        <td>2025</td>
+                        <td><span class="badge selesai">Selesai</span></td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Pekerjaan Geotagging 100% Tanaman Rehabilitasi DAS (3.999 Ha)</td>
+                        <td>PT. Indominco Mandiri</td>
+                        <td>Taman Nasional Kutai</td>
+                        <td>2026</td>
+                        <td><span class="badge berjalan">Sedang Berjalan</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <div class="slide-footer">
+        <div class="footer-item"><i class="fa-solid fa-map-location-dot"></i> <span>Jl. Padat Karya Gg. Sa'aludin RT.48 Blok A No. 10, Loa Bakung, Samarinda</span></div>
+        <div class="footer-item"><i class="fa-solid fa-phone-volume"></i> <span>0821-2525-3335</span></div>
+        <div class="footer-item"><i class="fa-solid fa-envelope-open-text"></i> <span>adhyastasylvajaya@gmail.com</span></div>
+    </div>
+</div>
+
+<div class="slide-container" id="slide10">
+    <h2 class="slide-title">Portofolio: Reklamasi Tambang & Mangrove</h2>
+    <div class="content-area">
+        <div class="table-layout glass-panel compact-table-wrapper">
+            <table class="compact-table">
+                <thead>
+                    <tr>
+                        <th style="width:5%;">No</th>
+                        <th style="width:35%;">Nama Pekerjaan</th>
+                        <th style="width:20%;">Pemberi Kerja</th>
+                        <th style="width:20%;">Lokasi</th>
+                        <th style="width:10%;">Tahun</th>
+                        <th style="width:10%;">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Pembuatan Petak Ukur (PU) Pada Area Reklamasi</td>
+                        <td>PT. Indominco Mandiri</td>
+                        <td>Area Reklamasi IMM</td>
+                        <td>2022</td>
+                        <td><span class="badge selesai">Selesai</span></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Penanaman Sisipan, Pemeliharaan dan Penilaian Keberhasilan Reklamasi Pasca Tambang (500 Ha)</td>
+                        <td>PT. Indominco Mandiri</td>
+                        <td>Area Reklamasi IMM</td>
+                        <td>2023</td>
+                        <td><span class="badge selesai">Selesai</span></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Penanaman (P0) Reklamasi Hutan Area Bekas Tambang (50 Ha)</td>
+                        <td>PT Kedap Sayaaq</td>
+                        <td>Area Reklamasi PT KS</td>
+                        <td>2023</td>
+                        <td><span class="badge selesai">Selesai</span></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Pemeliharaan (P1) Reklamasi Hutan Area Bekas Tambang (50 Ha)</td>
+                        <td>PT Kedap Sayaaq</td>
+                        <td>Area Reklamasi PT KS</td>
+                        <td>2025</td>
+                        <td><span class="badge selesai">Selesai</span></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Pengadaan Jasa Pekerjaan Penanaman Mangrove Intensif (10 Ha)</td>
+                        <td>PT. Pupuk Kaltim</td>
+                        <td>Taman Nasional Kutai</td>
+                        <td>2024</td>
+                        <td><span class="badge selesai">Selesai</span></td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Pengadaan Jasa Pemulihan Ekosistem Mangrove Kerjasama TN Kutai (60 Ha)</td>
+                        <td>PT. Pupuk Kaltim</td>
+                        <td>Taman Nasional Kutai</td>
+                        <td>2025</td>
+                        <td><span class="badge berjalan">Sedang Berjalan</span></td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Pelaksana EO Serah Terima Rehabilitasi DAS</td>
+                        <td>PT Kideco Jaya Agung</td>
+                        <td>Taman Nasional Kutai</td>
+                        <td>2024</td>
+                        <td><span class="badge selesai">Selesai</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <div class="slide-footer">
+        <div class="footer-item"><i class="fa-solid fa-map-location-dot"></i> <span>Jl. Padat Karya Gg. Sa'aludin RT.48 Blok A No. 10, Loa Bakung, Samarinda</span></div>
+        <div class="footer-item"><i class="fa-solid fa-phone-volume"></i> <span>0821-2525-3335</span></div>
+        <div class="footer-item"><i class="fa-solid fa-envelope-open-text"></i> <span>adhyastasylvajaya@gmail.com</span></div>
+    </div>
+</div>
+
+<div class="slide-container" id="slide11">
+    <div class="qa-layout">
+        <i class="fa-solid fa-leaf" style="font-size: 70px; color: #1b4332; margin-bottom: 25px; filter: drop-shadow(0px 5px 10px rgba(0,0,0,0.1));"></i>
+        <h2>Mari Berkolaborasi.</h2>
+        <p>Solusi profesional dan terpercaya untuk rehabilitasi dan pemulihan Hutan.</p>
+    </div>
+    
+    <div class="slide-footer">
+        <div class="footer-item"><i class="fa-solid fa-map-location-dot"></i> <span>Jl. Padat Karya Gg. Sa'aludin RT.48 Blok A No. 10, Loa Bakung, Samarinda</span></div>
+        <div class="footer-item"><i class="fa-solid fa-phone-volume"></i> <span>0821-2525-3335</span></div>
+        <div class="footer-item"><i class="fa-solid fa-envelope-open-text"></i> <span>adhyastasylvajaya@gmail.com</span></div>
+    </div>
+</div>
+
+</body>
+</html>
